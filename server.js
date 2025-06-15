@@ -13,10 +13,10 @@ initializePassport(
   id => users.find(user => user.id === id)
 );
 
-app.set('view engine', 'ejs'); // ✅ fixed
+app.set('view engine', 'ejs'); 
 app.use(express.urlencoded({ extended: false }));
 
-// ✅ Add session support
+// Add session support
 app.use(session({
   secret: 'secret',
   resave: false,
