@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Home</title>
+</head>
+<body>
+  <h1>
+    <% if (name && name !== 'Guest') { %>
+      Hi, <%= name %> 👋
+    <% } else { %>
+      Welcome Guest!
+    <% } %>
+  </h1>
+
+  <% if (name === 'Guest') { %>
+    <a href="/login">Login</a> | <a href="/register">Register</a>
+  <% } else { %>
+    <form action="/logout" method="POST">
+      <button type="submit">Logout</button>
+    </form>
+  <% } %>
+</body>
+</html>
